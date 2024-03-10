@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>task 7</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="/index.html" class="header__logo">
+            <img class="header__logo" src="../img/Гомер.png" alt="Image" />
+          </a>
+          <h1 class="header__title">
+            Арифметичні і логічні вирази. Реалізація алгоритмів з розгалуженням.
+          </h1>
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="page__container">
+          <h3 class="page__title-task">Задача 7</h3>
+          <p class="page__text-task">
+            З клавіатури вводиться номер місяця. Вивести до якої пори він
+            відноситься.
+          </p>
+          <p class="page__text-task page__text-task--red">Розв'язок:</p>
+          <script>
+            // Вхідні дані
+            const numberOfMonth = parseInt(
+              prompt(
+                "Введіть номер місяця від 1 до 12, щоб дізнатися до якої пори року він належить",
+                "6"
+              )
+            );
+
+            // Обчислення
+
+            let result;
+
+            if (numberOfMonth < 3 || numberOfMonth === 12) result = "зима";
+            else if (numberOfMonth < 6) result = "весна";
+            else if (numberOfMonth < 9) result = "літо";
+            else if (numberOfMonth < 12) result = "осінь";
+            else result = "Сталася помилка. пробуйте ввести число від 1 до 12";
+
+            document.write(
+              `Номер місяця належить до пори року <span style="color: black">${result}</span>`
+            );
+
+            document.write(
+              `<pre>
+                
+            // Вхідні дані 
+
+            const numberOfMonth = parseInt(prompt("Введіть номер місяця від 1 до 12, щоб дізнатися до якої пори року він належить", \`${numberOfMonth}\`))
+
+            // Обчислення
+
+            let result
+
+            if (numberOfMonth < 3 || numberOfMonth === 12)
+              result = 'зима'
+
+            else if (numberOfMonth < 6)
+              result = 'весна'
+
+            else if (numberOfMonth < 9)
+              result = 'літо'
+
+            else if (numberOfMonth < 12)
+              result = 'осінь'
+
+            else result = 'Сталася помилка. пробуйте ввести число від 1 до 12'
+
+            document.write(\`Номер місяця належить до пори року < span style = "color: black" > ${result}</span > \)
+                </pre>`
+            );
+          </script>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">2024</p>
+      </footer>
+    </div>
+  </body>
+</html>

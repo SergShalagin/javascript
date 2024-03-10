@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>task5</title>
+</head>
+<body>
+   <main class="page">
+
+      <div class="page__container ">
+        <h3 class="page__title-task">Задача 5</h3>
+        <p class="page__text-task">
+          З клавіатури вводиться назва категорії водія (А-мотоцикл, В-легковий автомобіль,
+          С-вантажний автомобіль). Вивести на екран назву транспортного засобу, яким він може
+          керувати.
+        </p>
+        <p class="page__text-task page__text-task--red">
+          Розв'язок:
+        </p>
+        <script>
+          // Отримуємо вхідні дані 
+          const categoryDriverLicense = prompt("Введіть позначення категорії", 'A')
+          // ---------------------------------
+          let result
+
+          switch (categoryDriverLicense.toUpperCase()) {
+            case 'A': result = 'мотоциклом.'
+              break;
+
+            case 'B': result = 'автомобілем.'
+              break;
+
+            case 'C': result = 'вантажним автомобілем.'
+              break;
+
+            default: result = 'Некоректний ввід категорії. Введіть дані латиницею!'
+              break;
+          }
+          // Виводимо результати...
+          document.write(`Категорія <span style="color: black">${categoryDriverLicense.toUpperCase()}</span> дозволяє Вам керувати: ${result}`)
+
+          document.write(
+            `<pre>
+
+          // Отримуємо вхідні дані 
+
+          const categoryDriverLicense = prompt("Введіть позначення категорії", \`${categoryDriverLicense.toUpperCase()} \`)
+
+          // Проводимо розрахунки
+
+          let result
+
+          switch (categoryDriverLicense.toUpperCase()) {
+            case 'A': result = 'мотоциклом.'
+              break;
+
+            case 'B': result = 'автомобілем.'
+              break;
+
+            case 'C': result = 'вантажним автомобілем.'
+              break;
+
+            default: result = 'Некоректний ввід категорії. Введіть дані латиницею!'
+              break;
+          }
+          // Виводимо результати...
+          document.write(\`Категорія <span style="color: black">${categoryDriverLicense.toUpperCase()}</span> дозволяє Вам керувати: ${result}\`)
+
+              </pre>`
+          )
+        </script>
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">2024</p>
+    </footer>
+  </div>
+
+</body>
+</html>

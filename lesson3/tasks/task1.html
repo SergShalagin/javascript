@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>task1</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="/index.html" class="header__logo">
+            <img class="header__logo" src="../img/Гомер.png" alt="logo" />
+          </a>
+          <h1 class="header__title">
+            Вступ до веб-програмування. Вступ до JS. Лінійні алгоритми.
+          </h1>
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="page__container">
+          <h3 class="page__title-task">Задача 1</h3>
+          <p class="page__text-task">
+            З клавіатури вводяться імена двох дітей та кількість у них цукерок.
+            Вивести не екран ім’я тієї дитини, у якої кількість цукерок є
+            більшою, або вивести, що кількість однакова.
+          </p>
+          <p class="page__text-task page__text-task--red">Розв'язок:</p>
+          <script>
+            // Вихідні дані
+
+            const nameFirstChild = prompt(
+              "Введіть ім'я першої дитини:",
+              "Сергій"
+            );
+            const namberСandiesFirstChild = parseInt(
+              prompt(
+                `Введіть кількість цукерок, які має ${nameFirstChild}:`,
+                "8"
+              )
+            );
+
+            const nameSecondChild = prompt(
+              "Введіть ім'я другої дитини:",
+              "Софія"
+            );
+            const namberСandiesSecondChild = parseInt(
+              prompt(
+                `Введіть кількість цукерок, які має ${nameSecondChild}:`,
+                "6"
+              )
+            );
+
+            // Обчислення та вивід результату
+            let result;
+            if (namberСandiesFirstChild > namberСandiesSecondChild)
+              result = `${nameFirstChild} має більше цукерок`;
+            else if (namberСandiesFirstChild === namberСandiesSecondChild)
+              result = `${nameFirstChild} та ${nameSecondChild} мають однакову кількість цукерок, а саме по ${СnamberandiesFirstChild} кг.`;
+            else if (namberСandiesFirstChild < namberСandiesSecondChild)
+              result = `${nameSecondChild} має більше цукерок`;
+            else result = "Некоректний ввід.";
+            document.write(result);
+
+            document.write(
+              `<pre>
+
+            // Вихідні дані
+                
+            const nameFirstChild = prompt("Введіть ім'я першої дитини:", 'Сергій')
+            const namberСandiesFirstChild = parseInt(prompt(\`Введіть кількість цукерок, які має ${nameFirstChild}:\`, \`${namberСandiesFirstChild} \`))
+
+            const nameSecondChild = prompt("Введіть ім'я другої дитини:", 'Софія')
+            const namberСandiesSecondChild = parseInt(prompt(\`Введіть кількість цукерок, які має ${nameSecondChild}:\`, \`${namberСandiesSecondChild}\`))
+
+            // Обчислення та вивід результату
+
+            let result
+
+            if (namberСandiesFirstChild > namberСandiesSecondChild)
+              result = \`${nameFirstChild} має більше цукерок\`
+
+            else if (namberСandiesFirstChild === namberСandiesSecondChild)
+              result = \`${nameFirstChild} та ${nameSecondChild} мають однакову кількість цукерок, а саме по ${namberСandiesFirstChild} кг.\`
+
+            else if (namberСandiesFirstChild < namberСandiesSecondChild)
+              result = \`${nameSecondChild} має більше цукерок\`
+
+            else
+              result = 'Некоректний ввід.'
+
+            document.write(result)
+                </pre>`
+            );
+          </script>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">2024</p>
+      </footer>
+    </div>
+  </body>
+</html>

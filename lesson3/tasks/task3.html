@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>task2</title>
+</head>
+<body>
+   <div class="wrapper">
+      <header class="header">
+
+        <div class="header__container">
+          <a href="/index.html" class="header__logo">
+            <img class="header__logo" src="../img/Гомер.png" alt="Image">
+          </a>
+          <h1 class="header__title">Арифметичні і логічні вирази. Реалізація алгоритмів з
+            розгалуженням.</h1>
+
+        </div>
+      </header>
+
+      <main class="page">
+
+        <div class="page__container ">
+          <h3 class="page__title-task">Задача 3</h3>
+          <p class="page__text-task">
+            Випадковим чином генерується число від 1 до 5. Спробуйте вгадати число за 2 спроби.
+          </p>
+          <p class="page__text-task page__text-task--red">
+            Розв'язок:
+          </p>
+          <script>
+            //Вносимо вихідні дані
+
+            const minNum = 1
+            const maxNum = 5
+            const randomNmber = minNum + Math.floor(Math.random() * (maxNum - minNum + 1))
+
+            let firstEnterNum = parseInt(prompt('Спробуйте вгадати число за 2 спроби від 1 до 5.', '5'))
+            let secondEnterNum
+
+            // Виводимо рзультати 
+
+            let result
+
+            if (randomNmber === firstEnterNum)
+              result = `Вам вдалося з першого разу! Виграшне число ${firstEnterNum}`
+
+            else if (randomNmber !== firstEnterNum) {
+              secondEnterNum = parseInt(prompt('Невдало. Друга спроба від 1 до 5.', '1'))
+
+              if (randomNmber === secondEnterNum) {
+                result = `Вам вдалося з другої спроби! Виграшне число ${secondEnterNum}`
+              }
+              else result = `Нажаль Ви не вгадали. Виграшне число ${randomNmber}`
+            }
+
+            document.write(result)
+
+            document.write(
+              `<pre> 
+          <a style="
+              color: #FF0000;
+              padding: 10px 15px;
+              font-size: 18px;
+              background: #404040;
+              border-radius: 10px;
+              box-shadow: 1px 1px 4px 1px #C0C0C0;"
+
+              onmouseover="this.style.background='#191919'"
+              onmouseout="this.style.background='#404040'" 
+              href="task3.html"> Ще раз зіграти</a>
+
+            //Вносимо вихідні дані
+
+            const minNum = 1
+            const maxNum = 5
+            const randomNmber = minNum + Math.floor(Math.random() * (maxNum - minNum + 1))
+
+            let firstEnterNum = parseInt(prompt('Спробуйте вгадати число за 2 спроби від 1 до 5.', '2'))
+            let secondEnterNum
+
+            // Виводимо рзультати 
+
+            let result
+
+            if (randomNmber === firstEnterNum)
+              result = \`Вам вдалося з першого разу! Виграшне число ${firstEnterNum}\`
+
+            else if (randomNmber !== firstEnterNum) {
+              secondEnterNum = parseInt(prompt('Невдало. Друга спроба від 1 до 5.', '3'))
+
+              if (randomNmber === secondEnterNum) {
+                result = \`Вам вдалося з другої спроби! Виграшне число ${secondEnterNum}\`
+              }
+              else result = \`Нажаль Ви не вгадали. Виграшне число ${randomNmber}\`
+            }
+
+            document.write(result)
+                </pre>`
+            )
+
+          </script>
+        </div>
+
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">2024</p>
+      </footer>
+</body>
+</html>

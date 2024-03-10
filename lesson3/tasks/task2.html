@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/style.css">
+   <title>task2</title>
+</head>
+<body>
+   
+   <main class="page">
+
+      <div class="page__container ">
+        <h3 class="page__title-task">Задача 2</h3>
+        <p class="page__text-task">
+          З клавіатури вводиться ціна товару і кількість грошей. Якщо грошей не вистачає то
+          відмовляємо у покупці, інакше, якщо ще залишаються гроші, то пропонуємо купити лотерею
+          за 4 грн.
+        </p>
+        <p class="page__text-task page__text-task--red">
+          Розв'язок:
+        </p>
+
+        <script>
+          //Отримуємо вхідні дані
+
+          const priceProd = parseFloat(prompt("Введіть ціну товару", '5.5грн'))
+          const currentAmount = parseFloat(prompt("Введіть наявну суму коштів", '120грн'))
+          const costLottery = 4
+
+          // Проводимо розрахунки
+
+          let result
+          const rest = currentAmount - priceProd //вивод решти коштів;
+
+          if (priceProd > currentAmount)
+            result = 'Нажаль, у Вас недостатньо коштів.'
+
+          else if (currentAmount - priceProd >= costLottery)
+            result = 'Чи не бажаєте витратити гроші на лотарею?'
+
+          else {
+            const rest = currentAmount - priceProd
+            result = `Дякуємо за покупку! Ось Ваша решта ${rest.toFixed(2)}грн`
+          }
+
+          document.write(result)
+
+          document.write(
+            `<pre>
+
+          //Отримуємо вхідні дані
+
+          const priceProd = parseFloat(prompt("Введіть ціну товару", '5.5грн'))
+          const currentAmount = parseFloat(prompt("Введіть наявну суму коштів", '120грн'))
+          const costLottery = 4
+
+          // Проводимо розрахунки
+
+          let result
+
+          if (priceProd > currentAmount)
+            result = 'Нажаль, у Вас недостатньо коштів.'
+
+          else if (currentAmount - priceProd >= costLottery)
+            result = 'Чи не бажаєте витратити гроші на лотарею?'
+
+          else {
+            const rest = currentAmount - priceProd
+            result = \`Дякуємо за покупку! Ось Ваша решта ${rest.toFixed(2)}грн\`
+          }
+
+          document.write(result)
+            </pre>`)
+
+
+        </script>
+
+      </div>
+
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">2024</p>
+    </footer>
+</body>
+</html>
