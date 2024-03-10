@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>task7</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="../index.html" class="header__logo">
+            <img class="header__logo" src="../img/Гомер.png" alt="Image" />
+          </a>
+          <h1 class="header__title">
+            Вступ до веб-програмування. Вступ до JS. Лінійні алгоритми.
+          </h1>
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="page__container">
+          <h3 class="page__title-task">Задача 7</h3>
+          <p class="page__text-task">
+            Знайти суму випадкового номера місяця (від 1 до 12) та випадкового
+            номера дня (від 0 до 6).
+          </p>
+          <p class="page__text-task page__text-task--red">Розв'язок:</p>
+          <script>
+            // Вхідні дані
+            const randomMonthDay = Math.floor(Math.random() * 12) + 1;
+            const randomDay = Math.floor(Math.random() * 7);
+            // Обчислюємо суму
+
+            const sum = randomDay + randomMonthDay;
+            document.write(
+              `<pre>
+            // Вхідні дані 
+              const randomMonthDay = Math.floor(Math.random() * 12) + 1
+              const randomDay = Math.floor(Math.random() * 7)
+
+            // Обчислюємо суму
+              const sum = randomDay + randomMonthDay
+
+            // Виводимо результати...
+                </pre>`
+            );
+            document.write(`Результатом обчислення буде ${sum}`);
+          </script>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">2024</p>
+      </footer>
+    </div>
+  </body>
+</html>

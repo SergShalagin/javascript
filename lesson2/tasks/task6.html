@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>task 6</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="../index.html" class="header__logo">
+            <img class="header__logo" src="../img/Гомер.png" alt="Image" />
+          </a>
+          <h1 class="header__title">
+            Вступ до веб-програмування. Вступ до JS. Лінійні алгоритми.
+          </h1>
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="page__container">
+          <h3 class="page__title-task">Задача 6</h3>
+          <p class="page__text-task">
+            З клавіатури вводяться вартість товару та кількість одиниць 3
+            товарів. Обчислити вартість кожного товару окремо та загальну
+            вартість. Вивести чек (як у супермаркеті) використовуючи елементи
+            розмітки.
+          </p>
+          <p class="page__text-task page__text-task--red">Розв'язок:</p>
+          <script>
+            // Отримуємо вхідні дані
+            const costProd = parseFloat(
+              prompt("Введіть вартість товару за упаковку (3шт), ₴", "1.9")
+            );
+            const quantity = parseInt(
+              prompt("Введіть кількість упаковок товару, шт", "10")
+            );
+
+            // Проводимо розрахунки
+
+            //вартість одного товару
+            const costProdPerOne = costProd / 3;
+
+            // Загальна вартість
+            const costAllOfProd = quantity * costProdPerOne * 3;
+            document.write(
+              `<pre>
+             // Отримуємо вхідні дані 
+            const costProd = ${costProd}₴
+            const quantity = ${quantity}шт
+
+            // Проводимо розрахунки
+
+            //вартість одного товару
+            const costProdPerOne = costProd / 3
+            
+            // Загальна вартість
+            const costAllOfProd = quantity * costProdPerOne * 3
+
+            // Виводимо результати...
+                </pre>`
+            );
+            document.write(
+              `<table style='border:1px solid #0000' >
+                <tr>
+                  <th  style="padding-right: 15px; text-align: left">Товар</th>
+                  <td> ${quantity}шт * ${costProdPerOne.toFixed(2)}₴</td>
+                </tr>
+                <tr>
+                  <th  style="padding-right: 15px; text-align: left">Всього:</th>
+                  <td> ${costAllOfProd.toFixed(2)}₴</td>
+                </tr>
+              </table>`
+            );
+          </script>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">2024</p>
+      </footer>
+    </div>
+  </body>
+</html>
