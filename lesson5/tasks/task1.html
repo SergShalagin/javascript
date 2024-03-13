@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>task1</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="/index.html" class="header__logo">
+            <img class="header__logo" src="../img/Гомер.png" alt="logo" />
+          </a>
+          <h1 class="header__title">Цикли</h1>
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="page__container">
+          <h3 class="page__title-task">Задача 1</h3>
+          <p class="page__text-task">
+            Поступово генерувати 100 випадкових чисел від 1 до 1000. Підрахувати
+            яких чисел більше: парних чи непарних.
+          </p>
+          <p class="page__text-task page__text-task--red">Розв'язок:</p>
+          <script>
+            // Вихідні дані
+
+            let evenNumber = 0; //парне число
+            let oddNumber = 0; // непарне число
+            let minNumber = 1;
+            let maxNumber = 1000;
+
+            for (let i = 0; i < 100; i++) {
+              const randNum =
+                minNumber +
+                Math.floor(Math.random() * (maxNumber - minNumber + 1));
+              if (randNum % 2 === 0) evenNumber++;
+              else oddNumber++;
+            }
+            document.write(
+              `Парних чисел--${evenNumber}, а непарних--${oddNumber}`
+            );
+          </script>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">2024</p>
+      </footer>
+    </div>
+  </body>
+</html>
