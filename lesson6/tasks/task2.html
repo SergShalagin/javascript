@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>task2</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="/index.html" class="header__logo">
+            <img class="header__logo" src="../img/Гомер.png" alt="logo" />
+          </a>
+          <h1 class="header__title">Цикли</h1>
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="page__container">
+          <h3 class="page__title-task">Задача 2</h3>
+          <p class="page__text-task">
+            Інвестор вклав S тис. грн на 20 років під 20% річних, податок
+            складає 5% від суми прибутку. Визначити за допомогою циклів суму,
+            яку він одержить.
+          </p>
+          <p class="page__text-task page__text-task--red">Розв'язок:</p>
+          <script>
+            const investContribution = parseInt(
+              prompt("Яку сумму вклав інвестор у тис.гривнях")
+            );
+            const yearPersent = 0.2;
+            const tax = 0.05;
+
+            for (i = 0; i < 20; i++) {
+              investContribution = Math.round(
+                investContribution - investContribution * yearPersent
+              );
+            }
+            investContribution = Math.round(
+              investContribution - investContribution * tax
+            );
+            document.write(
+              `Сумму яку отримає інвестор ${investContribution} грн.`
+            );
+          </script>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">2024</p>
+      </footer>
+    </div>
+  </body>
+</html>

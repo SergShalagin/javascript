@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>task4</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="/index.html" class="header__logo">
+            <img class="header__logo" src="../img/Гомер.png" alt="logo" />
+          </a>
+          <h1 class="header__title">Цикли</h1>
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="page__container">
+          <h3 class="page__title-task">Задача 4</h3>
+          <p class="page__text-task">
+            Вивести на екран<br />
+            A B C D E<br />
+            B C D E F<br />
+            C D E F G<br />
+            D E F G H<br />
+            E F G H I<br />
+          </p>
+          <p class="page__text-task page__text-task--red">Розв'язок:</p>
+          <script>
+            let startAlphabet = "A".charCodeAt();
+            document.write("<table>");
+            for (let row = 0; row < 5; row++) {
+              document.write("<tr>");
+              for (let alphabet = 0; alphabet < 5; alphabet++) {
+                document.write(
+                  `<td>${String.fromCharCode(startAlphabet + alphabet)}</td>`
+                );
+              }
+              startAlphabet++;
+              document.write("<tr>");
+            }
+            document.write("</table>");
+          </script>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">2024</p>
+      </footer>
+    </div>
+  </body>
+</html>
