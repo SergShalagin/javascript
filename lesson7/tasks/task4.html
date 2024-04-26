@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>task4</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="/index.html" class="header__logo">
+            <img class="header__logo" src="../img/Гомер.png" alt="logo" />
+          </a>
+          <h1 class="header__title">Function</h1>
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="page__container">
+          <h3 class="page__title-task">Задача 4</h3>
+          <p class="page__text-task">
+            Створити функцію, яка створює таблицю з вказаною кількістю рядків і
+            стовпців (таблиця заповнюється заданим фіксованим повідомленням).
+          </p>
+          <p class="page__text-task page__text-task--red">Розв'язок:</p>
+          <script>
+            function createTable(rows, columns) {
+              let table = `<table>`;
+              for (let i = 0; i < rows; i++) {
+                table += `<tr>`;
+                for (let j = 0; j < columns; j++) {
+                  table += `<td> Hello!!!</td>`;
+                }
+                table += `</tr>`;
+              }
+              table += `</table>`;
+              return table;
+            }
+
+            let rows = parseInt(prompt(`Введіть кількість стовбців`));
+            let columns = parseInt(prompt(`Введіть кількість колонок`));
+            let newTable = createTable(rows, columns);
+            document.write(newTable);
+          </script>
+          <style>
+            table, td{
+              border: 2px solid blue;
+            }
+          </style>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">2024</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+@import url(./reset.css);
+@import url("https://fonts.googleapis.com/css?family=Inter:300,regular,500&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.2;
+  color: blue;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+  min-height: 100%;
+  overflow: clip;
+}
+.wrapper > main {
+  flex-grow: 1;
+}
+
+[class*="__container"] {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+}
+.header__container {
+}
+
+@media (min-width: 550.98px) {
+  .header__container {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.header__logo {
+  flex: 0 0 60px;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.header__title {
+  font-size: 30px;
+  color: blueviolet;
+  font-weight: 700;
+}
+
+.page {
+}
+.page__container {
+}
+.page__list {
+}
+.page__item:not (:last-child) {
+  margin-bottom: 25px;
+}
+
+.page__title-item {
+  font-size: 18px;
+  color: blue;
+  margin-bottom: 20px;
+  font-weight: 700;
+  display: flex;
+  gap: 15px;
+}
+.page__title-item::before {
+  flex-shrink: 0;
+  margin-top: 2px;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+  box-shadow: 0px 0px 7px 1px black;
+}
+.page__link {
+  color: black;
+  text-decoration: underline;
+  padding: 10px 15px;
+}
+.page__link:hover {
+  color: grey;
+  text-decoration: underline;
+  outline: 1px solid red;
+}
+.footer {
+  text-align: center;
+}
+.footer__text {
+  font-size: 18px;
+  color: brown;
+}
+
+.page__link-task {
+  color: blue;
+  text-decoration: underline;
+  padding: 10px 15px;
+}
+.page__link-task:hover {
+  color: blueviolet;
+  text-decoration: underline;
+  outline: 1px solid red;
+}
+
+.page__item {
+}
+
+.page__title-task {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: blue;
+}
+.page__des-task {
+  color: black;
+  max-width: 600px;
+}
+
+.page__text-task {
+  color: #c0c0c0;
+  font-size: 18px;
+  margin-bottom: 22px;
+}
+
+.page__text-task--red {
+  color: red;
+}
+
+pre {
+  color: #00ff00;
+  font-size: 18px;
+  overflow: auto;
+}
+
+.page__coments {
+  margin: 22px 0;
+  color: yellowgreen;
+}
+button {
+  border-radius: 10px;
+  color: blue;
+  background-color: black;
+  height: 50px;
+  width: 100px;
+  margin-top: 15px;
+}
+table {
+  border: 2px solid black;
+}

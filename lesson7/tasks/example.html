@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Поступово вводяться вартості 7 товарів із зазначенням номера товару. Знайти загальну вартість.
+
+      // let totalPrice = 0;
+      // for (let i = 1; i <= 7; i++) {
+      //   const price = parseFloat(prompt(`Введіть вартість ${i} товару`));
+      //   totalPrice += price;
+      // }
+      // document.write(`Total price = ${totalPrice}`);
+      // for (let i = 10; i >= 1; i--) {
+      //   alert(i);
+      // }
+
+      // Вивести високосні роки у вказаному діапазоні (між початковим і кінцевим  роками).
+      //високосний  - він кратний 4, але не кратний 100, а також якщо він кратний 400.
+
+      // const startYear = parseInt(prompt("Веддіть початковий рік"));
+      // const endYear = parseInt(prompt("Введіть кінцевий рік"));
+
+      // for (let year = startYear; year <= endYear; year++) {
+      //   if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+      //     document.write(`${year} <br>`);
+      //   }
+      // }
+
+      // Вивести усі трицифрові числа, де друга цифра завжди є меншою або рівню за першу,
+      // а третя є меншою або рівною за другу.
+
+      // for (let c1 = 1; c1 <= 9; c1++) {
+      //   for (let c2 = 0; c2 <= c1; c2++) {
+      //     for (let c3 = 0; c3 <= c2; c3++) {
+      //       document.write(`${c1}${c2}${c3} <br>`);
+      //     }
+      //   }
+      // }
+
+      // -------------------------------------------
+      //  Задача. Знайти суму 3-х чисел
+      //   function getSum (num1, num2, num3){
+      //     // prompt(`enter num1- ${num1}`)
+      //     let sum= num1+num2+num3
+      //     return sum
+      //   }
+      // function getSum(a,b,c){
+      // return a+b+c}
+      // let a=parseFloat(prompt(`First number`))
+      // let c=parseFloat(prompt(`Second number`))
+      // let b=parseFloat(prompt(`Third number`))
+      // let s=getSum(a,b,c)
+      // document.write(`Sum=${s}`)
+
+      //--------------------------------------------------------
+
+      // Задача. Ввести імена 3-х користувачів і привіти їх
+      //     function greeting(){
+      //       let userName=prompt(`Name`)
+      //       alert(`Hello ${userName}!`)
+      //     }
+      // for (let i=0; i<3; i++){
+      //   greeting()
+      // }
+      // -------------------------------------------------------
+      // Знайти максимальне серед 2-х чисел
+
+      // function getMax(c1, c2) {
+      //   let max
+      //   if (c1>c2) max=c1
+      //   else max=c2
+      //   return max
+      //     }
+      // document.write(`Max(2,8) =${getMax(2,8) }`)
+
+      // --------------------
+      // Знайти вартість путівки на вказану кількість днів (вказано вартість проживання, харчування, комплекса процедур)
+      // function getTripCost(livingCost, foodCost, procedureCost, dayNumbers) {
+      //   return (livingCost + foodCost + procedureCost) * dayNumbers;
+      // }
+      // const livingCost = parseFloat(prompt("Ваптість проживання?"));
+      // // const foodCost = parseFloat(prompt("Ваптість їжі?"));
+      // const procedureCost = parseFloat(prompt("Ваптість процедур?"));
+      // const dayNumbers = parseFloat(prompt("Кількість днів?"));
+      // let total = getTripCost(livingCost, foodCost, procedureCost, dayNumbers);
+      // document.write(`Total=${total}`);
+
+      // ------------------------------------------------------
+      // Двоє гравців кидають двічі разів кубик і визначається сумарна кількість балів. Визначити переможця
+      function getRandomScore(edgeNumber) {
+        return1 + Math.floor(Math.random() * edgeNumber);
+      }
+      function getTotalPlayerScore(edgeNumber) {
+        
+      }
+    </script>
+  </body>
+</html>
