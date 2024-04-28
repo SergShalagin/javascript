@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>task3</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="/index.html" class="header__logo">
+            <img class="header__logo" src="../img/Гомер.png" alt="logo" />
+          </a>
+          <h1 class="header__title">Arrays</h1>
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="page__container">
+          <h3 class="page__title-task">Задача 3</h3>
+          <p class="page__text-task">
+            Дано послідовність цін товарів та назв (у окремих масивах). Вивести
+            на екран ті, які може собі дозволити користувач (кількість грошей
+            задається). Приклад збереження даних:<br />
+            let productsPrices = [1000, 20, 31] <br />
+            let productsTitles = [‘cheese’, ‘juice’, ‘bread’] <br />
+          </p>
+          <p class="page__text-task page__text-task--red">Розв'язок:</p>
+          <script>
+            const productsPrices=[1000, 250, 500, 842, 25, 54, 245]
+            const productsTitles=['cheese', 'juice', 'bread', 'eggs', 'milk', 'apples', 'meat']
+            let userCart=[]
+            try {
+              const userMoney = parseFloat(prompt('Введіть сумму грошей яку ви маєте?', '500'))
+              if (isNaN(userMoney)){
+                throw new Error ('Не коректне значення!!!')
+              }
+              for (let i=0; i< productsPrices.length; i++){
+              if(productsPrices[i]<=userMoney){
+                userCart.push(productsTitles[i])
+              }
+            }
+            document.write(`Ви можете придбати==> ${userCart}`)}
+            catch (error) {
+              document.write(error.message)
+            }
+          </script>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">2024</p>
+      </footer>
+    </div>
+  </body>
+</html>

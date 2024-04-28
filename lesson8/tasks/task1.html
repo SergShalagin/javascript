@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>task1</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="/index.html" class="header__logo">
+            <img class="header__logo" src="../img/Гомер.png" alt="logo" />
+          </a>
+          <h1 class="header__title">Arrays</h1>
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="page__container">
+          <h3 class="page__title-task">Задача 1</h3>
+          <p class="page__text-task">
+            Дано послідовність номерів автомобілів. Підрахувати кількість
+            номерів, які : • починаються на букву «А»;<br />
+            • перша і остання літери співпадають;<br />
+            • складаються з більше ніш 5 символів;<br />
+          </p>
+          <p class="page__text-task page__text-task--red">Розв'язок:</p>
+          <script>
+            const carNumbers = ["АВ1234ВС", "ВС5678АВ", "КМ9876ОР", "ТН5432ІУ"];
+            let countFirstA = 0;
+            let sameLetters = 0;
+            let numLengthMore5 = 0;
+            for (let i = 0; i < carNumbers.length; i++) {
+              let tempEl = carNumbers[i];
+              let tempElLast = tempEl.slice(-1);
+              if (tempEl.length > 5) {
+                numLengthMore5++;
+              }
+              if (tempEl[0] === "А") countFirstA++;
+              if (tempEl[0] === tempElLast) sameLetters++;
+            }
+            document.write(
+              `Починаються на букву А: ${countFirstA}; 
+              <br> перша і остання літера співпадають ${sameLetters} разів; <br>
+                складається більше ніж 5 символів ${numLengthMore5}`
+            );
+          </script>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">2024</p>
+      </footer>
+    </div>
+  </body>
+</html>

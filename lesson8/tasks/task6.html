@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>task6</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="/index.html" class="header__logo">
+            <img class="header__logo" src="../img/Гомер.png" alt="logo" />
+          </a>
+          <h1 class="header__title">Цикли</h1>
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="page__container">
+          <h3 class="page__title-task">Задача 6</h3>
+          <p class="page__text-task">
+            Створити 10 елементів для введення цін продуктів
+          </p>
+          <p class="page__text-task page__text-task--red">Розв'язок:</p>
+          <script>
+            // Вихідні дані
+
+            for (let i = 1; i < 11; i++) {
+              document.write(
+                `<input type="text" width=20px>Введіть ціну продукту №${i} <br> </input>`
+              );
+            }
+          </script>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">2024</p>
+      </footer>
+    </div>
+  </body>
+</html>

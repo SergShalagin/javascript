@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>task4</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <a href="/index.html" class="header__logo">
+            <img class="header__logo" src="../img/Гомер.png" alt="logo" />
+          </a>
+          <h1 class="header__title">Arrays</h1>
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="page__container">
+          <h3 class="page__title-task">Задача 4</h3>
+          <p class="page__text-task">
+            Дано послідовність платіжок протягом року. Знайти сумарну кількість
+            грошей за:<br />
+            1) за весь рік;<br />
+            2) у першій половині року;<br />
+            3) у другій половині року;<br />
+            4) за літо;<br />
+            5) за ІІ квартал;<br />
+            6) за парні місяці (з парними номерами);<br />
+            7) за місяці, які є початковими у сезоні (весна, літо, осінь,
+            зима).<br />
+          </p>
+          <p class="page__text-task page__text-task--red">Розв'язок:</p>
+          <script>
+            let paymentYear = [
+              3300, 2950, 2800, 2360, 2365.78, 2200, 2067, 2198, 2054, 1920.12,
+              2789.89, 2910,
+            ];
+            let sumPerYear = 0,
+              sumPerFirstHalfYear = 0,
+              sumPerSecondHalfYear = 0,
+              sumPerSummer = 0,
+              sumPerSecondQuarter = 0,
+              sumPerEvenMonth = 0,
+              sumPerFirstMonthSeason = 0;
+
+            for (let i = 0; i < paymentYear.length; i++) {
+              sumPerYear += paymentYear[i];
+              if (i < 6) sumPerFirstHalfYear += paymentYear[i];
+              if (i >= 6) sumPerSecondHalfYear += paymentYear[i];
+              if (i >= 6 && i < 8) sumPerSummer += paymentYear[i];
+              if (i > 3 && i > 6) sumPerSecondQuarter += paymentYear[i];
+              if (i % 2 === 0) sumPerEvenMonth += paymentYear[i];
+              if (i === 11 || i === 5 || i === 8)
+                sumPerFirstMonthSeason += paymentYear[i];
+            }
+            document.write(`<table> <caption>Послідовність платіжок протягом року</caption>
+
+<tr><td>Сума  за весь рік: </td><td>${sumPerYear.toFixed(2)}</td> </tr>
+<tr><td>Сума  у першій половині року:</td> <td>${sumPerFirstHalfYear.toFixed(
+              2
+            )}</td> </tr>
+<tr><td>Сума  у другій половині року: </td><td>${sumPerSecondHalfYear.toFixed(
+              2
+            )}</td> </tr>
+<tr><td>Сума  за літо:</td> <td>${sumPerSummer.toFixed(2)}</td>
+<tr><td>Сума  за ІІ квартал:</td> <td>${sumPerSecondQuarter.toFixed(
+              2
+            )}</td> </tr>
+<tr><td>Сума  за парні місяці (з парними номерами): </td><td>${sumPerEvenMonth.toFixed(
+              2
+            )}</td></tr>
+<tr><td>Сума  за місяці, які є початковими у сезоні (весна, літо, осінь, зима):</td> <td>${sumPerFirstMonthSeason.toFixed(
+              2
+            )}</td></tr>
+
+</table>`);
+          </script>
+          <style>
+            div {
+              font-size: 18px;
+            }
+
+            caption {
+              margin-bottom: 14px;
+              color: #00ff00;
+              font-size: 20px;
+            }
+
+            table {
+              border: 1px solid#0000FF;
+            }
+
+            td {
+              border: 1px solid #0000ff;
+              padding: 10px;
+              color: black;
+            }
+          </style>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p class="footer__text">2024</p>
+      </footer>
+    </div>
+  </body>
+</html>
